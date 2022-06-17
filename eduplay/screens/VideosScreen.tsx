@@ -46,9 +46,6 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 					<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 				</Pressable>
 			</ScrollView>
-			{/* <Text style={styles.title}>Vídeos</Text>
-			<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-			<EditScreenInfo path="/screens/VideosScreen.tsx" /> */}
 		</View>
 	);
 }

@@ -46,7 +46,14 @@ function RootNavigator() {
 			<Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
 			<Stack.Group screenOptions={{ presentation: 'modal' }}>
 				<Stack.Screen name="Usuario" component={UsuarioScreen} />
-				<Stack.Screen name="Video" component={VideoScreen} initialParams={{videoId: 1}} />
+				<Stack.Screen
+					name="Video"
+					component={VideoScreen}
+					initialParams={{videoId: 1}}
+					options={() => ({
+						title: "Vídeo",
+					})}
+				/>
 			</Stack.Group>
 		</Stack.Navigator>
 	);
