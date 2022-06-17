@@ -21,7 +21,7 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 				style={styles.video}
 				source={require('../assets/videos/video1.mp4')}
 				useNativeControls
-				resizeMode={'contain'}
+				resizeMode='contain'
 			/>
 			<View style={styles.inline}>
 				<Text style={styles.title}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
@@ -56,9 +56,6 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 					</View>
 				</View>
 			</View>
-			{ showDescription &&
-				<Text style={styles.description}>A suite VLibras é um conjunto de ferramentas gratuitas e de código aberto que traduz conteúdos digitais (texto, áudio e vídeo) em Português para Libras, tornando computadores, celulares e plataformas Web mais acessíveis para as pessoas surdas.</Text>
-			}
 			<View style={styles.inlineWithBorders}>
 				<Pressable
 					onPress={() => {navigation.navigate('Channel', {
@@ -79,7 +76,15 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 					<Text style={{marginTop: 9, fontSize: 14}}>Você Sabia?</Text>
 					<Text style={{fontSize: 12, opacity: .6}}>7 mi inscritos</Text>
 				</Pressable>
-				<Text style={{textAlign: 'right', fontSize: 14, color: 'red', fontWeight: '800'}}>SEGUIR</Text>
+				<Text style={{fontSize: 20, color: 'red', fontWeight: '800', justifyContent: 'center', alignSelf: 'center', marginLeft: 'auto', marginRight: 15}}>SEGUIR</Text>
+			</View>
+			{ showDescription &&
+				<View style={styles.borderBottomWithOpacity}>
+					<Text style={styles.description}>A suite VLibras é um conjunto de ferramentas gratuitas e de código aberto que traduz conteúdos digitais (texto, áudio e vídeo) em Português para Libras, tornando computadores, celulares e plataformas Web mais acessíveis para as pessoas surdas.</Text>
+				</View>
+			}
+			<View style={styles.mLeft}>
+				<Text style={styles.titleSec}>Comentários</Text>
 			</View>
 		</View>
 	);
@@ -94,15 +99,26 @@ const styles = StyleSheet.create({
 		flexWrap:'wrap',
 	},
 	inlineWithBorders: {
-		marginTop: 10,
+		marginTop: 20,
 		borderTopWidth: 1,
 		borderBottomWidth: 1,
 		borderColor: 'rgba(255,255,255,.15)',
+		flexDirection: 'row'
+	},
+	mLeft: {
 		flexDirection:'row',
-		flexWrap:'wrap'
+		flexWrap:'wrap',
+		paddingTop: 5,
 	},
 	title: {
-		margin: 10,
+		marginTop: 10,
+		marginLeft: 10,
+		fontSize: 20,
+		fontWeight: 'bold',
+		width: '80%',
+	},
+	titleSec: {
+		marginLeft: 10,
 		fontSize: 20,
 		fontWeight: 'bold',
 		width: '80%',
@@ -150,12 +166,18 @@ const styles = StyleSheet.create({
 		opacity: .6
 	},
 	showDescription: {
-		margin: 10,
+		marginTop: 15,
+		marginLeft: 40,
 		color: '#999'
 	},
 	description: {
 		margin: 10,
 		fontSize: 16,
+		paddingBottom: 5
+	},
+	borderBottomWithOpacity: {
+		borderBottomWidth: 1,
+		borderColor: 'rgba(255,255,255,.15)'
 	},
 	video: {
 		alignSelf: 'center',
