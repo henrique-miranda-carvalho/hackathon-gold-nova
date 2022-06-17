@@ -37,7 +37,7 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 				<Text style={styles.continuity}>•</Text>
 				<Text style={styles.continuity}>há 1 hora</Text>
 			</View>
-			<View style={styles.feedback}>
+			<View>
 				<View style={styles.inline}>
 					<View style={styles.feedbackLike}>
 						<Pressable
@@ -89,11 +89,8 @@ const styles = StyleSheet.create({
 		fontWeight: 'bold',
 		width: '80%',
 	},
-	feedback: {
-		marginLeft: 10
-	},
 	feedbackLike: {
-		flex: .85,
+		flex: 1,
 		marginTop: 20
 	},
 	feedbackShare: {
