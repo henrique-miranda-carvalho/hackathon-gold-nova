@@ -11,7 +11,7 @@ export default function ChannelScreen({navigation}: RootStackScreenProps<'Channe
 			<View style={styles.channel}>
 				<Image
 					style={styles.channelIconBig}
-					source={require('../assets/images/thumbnail.jpg')}
+					source={require('../assets/images/channelicon.jpg')}
 				/>
 				<Text style={styles.channelName}>Você Sabia</Text>
 			</View>

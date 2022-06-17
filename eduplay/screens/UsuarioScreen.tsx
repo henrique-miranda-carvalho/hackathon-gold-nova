@@ -6,7 +6,7 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 
 export default function UsuarioScreen() {
-  const [isLogado, setLogado] = React.useState(true)
+  const [isLogado, setLogado] = React.useState(false)
   return (
     <View style={styles.container}>
       {isLogado &&
