@@ -8,7 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { ColorSchemeName, Pressable } from 'react-native';
+import { ColorSchemeName, Pressable, Image } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -82,12 +82,14 @@ function BottomTabNavigator() {
 			initialRouteName="Videos"
 			screenOptions={{
 				tabBarActiveTintColor: Colors[colorScheme].tint,
-			}}>
+				tabBarShowLabel: false,
+			}}
+			>
 			<BottomTab.Screen
 				name="Videos"
 				component={VideosScreen}
 				options={({ navigation }: RootTabScreenProps<'Videos'>) => ({
-					title: 'Vídeos',
+					title: 'Você Sabia',
 					tabBarIcon: ({ color }) => <FontAwesome name="video-camera" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -103,13 +105,19 @@ function BottomTabNavigator() {
 							/>
 						</Pressable>
 					),
+					headerLeft: () => (
+						<Image
+							style={{marginLeft: 16, width:32, height:32}}
+							source={require('../assets/images/channelicon.jpg')}
+						/>
+					),
 				})}
 			/>
 			<BottomTab.Screen
 				name="Audios"
 				component={AudiosScreen}
 				options={({ navigation }: RootTabScreenProps<'Audios'>) => ({
-					title: 'Áudios',
+					title: 'Você Sabia',
 					tabBarIcon: ({ color }) => <MaterialIcons name="multitrack-audio" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -125,13 +133,19 @@ function BottomTabNavigator() {
 							/>
 						</Pressable>
 					),
+					headerLeft: () => (
+						<Image
+							style={{marginLeft: 16, width:32, height:32}}
+							source={require('../assets/images/channelicon.jpg')}
+						/>
+					),
 				})}
 			/>
 			<BottomTab.Screen
 				name="Tvs"
 				component={TvsScreen}
 				options={({ navigation }: RootTabScreenProps<'Tvs'>) => ({
-					title: 'TVs',
+					title: 'Você Sabia',
 					tabBarIcon: ({ color }) => <Entypo name="tv" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -147,13 +161,19 @@ function BottomTabNavigator() {
 							/>
 						</Pressable>
 					),
+					headerLeft: () => (
+						<Image
+							style={{marginLeft: 16, width:32, height:32}}
+							source={require('../assets/images/channelicon.jpg')}
+						/>
+					),
 				})}
 			/>
 			<BottomTab.Screen
 				name="Radios"
 				component={RadiosScreen}
 				options={({ navigation }: RootTabScreenProps<'Radios'>) => ({
-					title: 'Rádios',
+					title: 'Você Sabia',
 					tabBarIcon: ({ color }) => <Entypo name="radio" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -169,13 +189,19 @@ function BottomTabNavigator() {
 							/>
 						</Pressable>
 					),
+					headerLeft: () => (
+						<Image
+							style={{marginLeft: 16, width:32, height:32}}
+							source={require('../assets/images/channelicon.jpg')}
+						/>
+					),
 				})}
 			/>
 			<BottomTab.Screen
 				name="Podcasts"
 				component={PodcastsScreen}
 				options={({ navigation }: RootTabScreenProps<'Podcasts'>) => ({
-					title: 'Podcasts',
+					title: 'Você Sabia',
 					tabBarIcon: ({ color }) => <FontAwesome name="podcast" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -190,6 +216,12 @@ function BottomTabNavigator() {
 								style={{ marginRight: 15 }}
 							/>
 						</Pressable>
+					),
+					headerLeft: () => (
+						<Image
+							style={{marginLeft: 16, width:32, height:32}}
+							source={require('../assets/images/channelicon.jpg')}
+						/>
 					),
 				})}
 			/>
