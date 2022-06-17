@@ -21,6 +21,7 @@ import RadiosScreen from '../screens/RadiosScreen';
 import PodcastsScreen from '../screens/PodcastsScreen';
 import VideoScreen from '../screens/VideoScreen';
 import ChannelScreen from '../screens/ChannelScreen';
+import {EmailScreen, SenhaScreen} from '../screens/LoginScreen';
 import { RootStackParamList, RootStackScreenProps, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -47,6 +48,20 @@ function RootNavigator() {
 			<Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
 			<Stack.Group screenOptions={{ presentation: 'modal' }}>
 				<Stack.Screen name="Usuario" component={UsuarioScreen} />
+				<Stack.Screen
+					name="Email"
+					component={EmailScreen}
+					options={({navigation}: RootStackScreenProps<'Email'>) => ({
+						title: "Login",
+					})}
+				/>
+				<Stack.Screen
+					name="Senha"
+					component={SenhaScreen}
+					options={({navigation}: RootStackScreenProps<'Senha'>) => ({
+						title: "Login",
+					})}
+				/>
 				<Stack.Screen
 					name="Video"
 					component={VideoScreen}

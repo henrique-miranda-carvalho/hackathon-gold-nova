@@ -1,0 +1,1 @@
+(global as any).logado = false;

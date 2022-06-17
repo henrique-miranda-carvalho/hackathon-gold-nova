@@ -1,15 +1,18 @@
+import '../global.ts'
 import { StatusBar } from 'expo-status-bar';
 import { Platform, StyleSheet, Pressable, Image } from 'react-native';
 import * as React from 'react';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import { RootStackScreenProps } from '../types';
 
 export default function UsuarioScreen() {
-  const [isLogado, setLogado] = React.useState(false)
+  const [isgLogado, setLogado] = React.useState(false)
+export default function UsuarioScreen({ route, navigation }: RootStackScreenProps<'Usuario'>) {
   return (
     <View style={styles.container}>
-      {isLogado &&
+      {(global as any).logado &&
         <View>
           <View style={styles.user}>
             <Image
@@ -25,15 +28,20 @@ export default function UsuarioScreen() {
           <Pressable>
             <Text style={styles.option}>Seu Canal</Text>
           </Pressable>
-          <Pressable>
+          <Pressable
+            onPress={() => {
+              (global as any).logado = false;
+              navigation.navigate('Videos');
+            }}
+          >
             <Text style={styles.option}>Sair</Text>
           </Pressable>
         </View>
       }
-      {!isLogado &&
+      {!(global as any).logado &&
         <View>
           <Pressable
-            onPress={() => {}}
+            onPress={() => {navigation.navigate("Email")}}
             style={({ pressed }) => ({
               opacity: pressed ? 0.5 : 1,
             })}
