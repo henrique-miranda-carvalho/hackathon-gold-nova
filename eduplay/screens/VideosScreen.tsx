@@ -19,7 +19,11 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 					/>
 					<View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 					<View style={styles.inline}>
-						<Pressable>
+						<Pressable
+							onPress={() => {navigation.navigate('Channel', {
+								channelId: 1,
+							})}}
+						>
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
 						<Text style={styles.title}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
@@ -44,7 +48,11 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 					/>
 					<View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 					<View style={styles.inline}>
-						<Pressable>
+						<Pressable
+							onPress={() => {navigation.navigate('Channel', {
+								channelId: 1,
+							})}}
+						>
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
 						<Text style={styles.title}>OLHO de DEUS foi encontrado no UNIVERSO!</Text>
@@ -69,7 +77,11 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 					/>
 					<View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 					<View style={styles.inline}>
-						<Pressable>
+						<Pressable
+							onPress={() => {navigation.navigate('Channel', {
+								channelId: 1,
+							})}}
+						>
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
 						<Text style={styles.title}>Como funciona o Akinator? O GÊNIO da Internet!</Text>
