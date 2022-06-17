@@ -26,7 +26,7 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 						>
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
-						<Text style={styles.title}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
+						<Text style={styles.title} numberOfLines={2}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
 						<View style={styles.inlineInside}>
 							<Text style={styles.subtitles}>Você Sabia?</Text>
 							<Text style={styles.continuity}>•</Text>
@@ -55,7 +55,7 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 						>
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
-						<Text style={styles.title}>OLHO de DEUS foi encontrado no UNIVERSO!</Text>
+						<Text style={styles.title} numberOfLines={2}>OLHO de DEUS foi encontrado no UNIVERSO!</Text>
 						<View style={styles.inlineInside}>
 							<Text style={styles.subtitles}>Você Sabia?</Text>
 							<Text style={styles.continuity}>•</Text>
@@ -84,7 +84,7 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 						>
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
-						<Text style={styles.title}>Como funciona o Akinator? O GÊNIO da Internet!</Text>
+						<Text style={styles.title} numberOfLines={2}>Como funciona o Akinator? O GÊNIO mais FODA da Internet!</Text>
 						<View style={styles.inlineInside}>
 							<Text style={styles.subtitles}>Você Sabia?</Text>
 							<Text style={styles.continuity}>•</Text>
@@ -105,18 +105,19 @@ const styles = StyleSheet.create({
 		flex: 1
 	},
 	title: {
+		fontFamily: 'Roboto',
 		marginLeft: 10,
 		marginTop: -5,
 		fontSize: 22.4,
-		fontWeight: '500',
+		fontWeight: '600',
 		width: '80%'
 	},
 	subtitles: {
-		fontSize: 13,
+		fontSize: 12,
 		opacity: .6
 	},
 	continuity: {
-		fontSize: 13,
+		fontSize: 12,
 		marginLeft: 5,
 		opacity: .6
 	},
