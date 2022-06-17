@@ -80,7 +80,7 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 			</View>
 			{ showDescription &&
 				<View style={styles.borderBottomWithOpacity}>
-					<Text style={styles.description}>A suite VLibras é um conjunto de ferramentas gratuitas e de código aberto que traduz conteúdos digitais (texto, áudio e vídeo) em Português para Libras, tornando computadores, celulares e plataformas Web mais acessíveis para as pessoas surdas.</Text>
+					<Text style={styles.description}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque aliquid dolore ipsa eveniet quidem veritatis dolorem cumque iusto magni eligendi repudiandae possimus ullam quisquam odio sed, exercitationem commodi fugit labore!</Text>
 				</View>
 			}
 			<View style={styles.mLeft}>
