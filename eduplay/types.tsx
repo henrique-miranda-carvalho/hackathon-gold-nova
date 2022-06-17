@@ -19,6 +19,8 @@ export type RootStackParamList = {
   Video: {videoId: number} | undefined;
   Channel: {channelId: number} | undefined;
   NotFound: undefined;
+  Email: undefined;
+  Senha: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
