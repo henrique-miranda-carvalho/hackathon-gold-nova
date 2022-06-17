@@ -89,7 +89,7 @@ function BottomTabNavigator() {
 				name="Videos"
 				component={VideosScreen}
 				options={({ navigation }: RootTabScreenProps<'Videos'>) => ({
-					title: 'Você Sabia',
+					title: 'Vídeos',
 					tabBarIcon: ({ color }) => <FontAwesome name="video-camera" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -108,7 +108,7 @@ function BottomTabNavigator() {
 					headerLeft: () => (
 						<Image
 							style={{marginLeft: 16, width:32, height:32}}
-							source={require('../assets/images/channelicon.jpg')}
+							source={require('../assets/images/eduplay.png')}
 						/>
 					),
 				})}
@@ -117,7 +117,7 @@ function BottomTabNavigator() {
 				name="Audios"
 				component={AudiosScreen}
 				options={({ navigation }: RootTabScreenProps<'Audios'>) => ({
-					title: 'Você Sabia',
+					title: 'Áudios',
 					tabBarIcon: ({ color }) => <MaterialIcons name="multitrack-audio" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -136,7 +136,7 @@ function BottomTabNavigator() {
 					headerLeft: () => (
 						<Image
 							style={{marginLeft: 16, width:32, height:32}}
-							source={require('../assets/images/channelicon.jpg')}
+							source={require('../assets/images/eduplay.png')}
 						/>
 					),
 				})}
@@ -145,7 +145,7 @@ function BottomTabNavigator() {
 				name="Tvs"
 				component={TvsScreen}
 				options={({ navigation }: RootTabScreenProps<'Tvs'>) => ({
-					title: 'Você Sabia',
+					title: 'Televisões',
 					tabBarIcon: ({ color }) => <Entypo name="tv" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -164,7 +164,7 @@ function BottomTabNavigator() {
 					headerLeft: () => (
 						<Image
 							style={{marginLeft: 16, width:32, height:32}}
-							source={require('../assets/images/channelicon.jpg')}
+							source={require('../assets/images/eduplay.png')}
 						/>
 					),
 				})}
@@ -173,7 +173,7 @@ function BottomTabNavigator() {
 				name="Radios"
 				component={RadiosScreen}
 				options={({ navigation }: RootTabScreenProps<'Radios'>) => ({
-					title: 'Você Sabia',
+					title: 'Rádios',
 					tabBarIcon: ({ color }) => <Entypo name="radio" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -192,7 +192,7 @@ function BottomTabNavigator() {
 					headerLeft: () => (
 						<Image
 							style={{marginLeft: 16, width:32, height:32}}
-							source={require('../assets/images/channelicon.jpg')}
+							source={require('../assets/images/eduplay.png')}
 						/>
 					),
 				})}
@@ -201,7 +201,7 @@ function BottomTabNavigator() {
 				name="Podcasts"
 				component={PodcastsScreen}
 				options={({ navigation }: RootTabScreenProps<'Podcasts'>) => ({
-					title: 'Você Sabia',
+					title: 'Podcasts',
 					tabBarIcon: ({ color }) => <FontAwesome name="podcast" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
@@ -220,7 +220,7 @@ function BottomTabNavigator() {
 					headerLeft: () => (
 						<Image
 							style={{marginLeft: 16, width:32, height:32}}
-							source={require('../assets/images/channelicon.jpg')}
+							source={require('../assets/images/eduplay.png')}
 						/>
 					),
 				})}
