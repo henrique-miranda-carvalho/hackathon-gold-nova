@@ -20,8 +20,8 @@ import TvsScreen from '../screens/TvsScreen';
 import RadiosScreen from '../screens/RadiosScreen';
 import PodcastsScreen from '../screens/PodcastsScreen';
 import VideoScreen from '../screens/VideoScreen';
-import ChannelScreen from '../screens/VideoScreen';
-import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
+import ChannelScreen from '../screens/ChannelScreen';
+import { RootStackParamList, RootStackScreenProps, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -51,7 +51,7 @@ function RootNavigator() {
 					name="Video"
 					component={VideoScreen}
 					initialParams={{videoId: 1}}
-					options={() => ({
+					options={({navigation}: RootStackScreenProps<'Video'>) => ({
 						title: "Vídeo",
 					})}
 				/>
@@ -59,7 +59,7 @@ function RootNavigator() {
 					name="Channel"
 					component={ChannelScreen}
 					initialParams={{channelId: 1}}
-					options={() => ({
+					options={({navigation}: RootStackScreenProps<'Channel'>) => ({
 						title: "Canal",
 					})}
 				/>

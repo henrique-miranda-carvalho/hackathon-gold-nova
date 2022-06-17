@@ -1,35 +1,191 @@
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet, Pressable } from 'react-native';
+import { Platform, StyleSheet, Pressable, Image, ScrollView } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
+import { RootStackScreenProps } from '../types';
 
-export default function ChannelScreen() {
+export default function ChannelScreen({navigation}: RootStackScreenProps<'Channel'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Canal</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/ChannelScreen.tsx" />
-
-      {/* Use a light status bar on iOS to account for the black space above the modal */}
-      <StatusBar style={Platform.OS === 'ios' ? 'light' : 'auto'} />
+			<View style={styles.channel}>
+				<Image
+					style={styles.channelIconBig}
+					source={require('../assets/images/thumbnail.jpg')}
+				/>
+				<Text style={styles.channelName}>Você Sabia</Text>
+			</View>
+      <ScrollView>
+        <Pressable
+          onPress={() => {
+            navigation.navigate('Video', {
+              videoId: 1,
+            })
+          }}
+        >
+          <Image
+            style={styles.cardImage}
+            source={require('../assets/images/thumbnail.jpg')}
+          />
+          <View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+          <View style={styles.inline}>
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Channel', {
+                  channelId: 1,
+                })
+              }}
+            >
+              <Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')} />
+            </Pressable>
+            <Text style={styles.title}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
+            <View style={styles.inlineInside}>
+              <Text style={styles.subtitles}>Você Sabia?</Text>
+              <Text style={styles.continuity}>•</Text>
+              <Text style={styles.continuity}>160 mil visualizações</Text>
+              <Text style={styles.continuity}>•</Text>
+              <Text style={styles.continuity}>há 1 hora</Text>
+            </View>
+          </View>
+          <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate('Video', {
+              videoId: 2,
+            })
+          }}
+        >
+          <Image
+            style={styles.cardImage}
+            source={require('../assets/images/thumbnail2.jpg')}
+          />
+          <View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+          <View style={styles.inline}>
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Channel', {
+                  channelId: 1,
+                })
+              }}
+            >
+              <Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')} />
+            </Pressable>
+            <Text style={styles.title}>OLHO de DEUS foi encontrado no UNIVERSO!</Text>
+            <View style={styles.inlineInside}>
+              <Text style={styles.subtitles}>Você Sabia?</Text>
+              <Text style={styles.continuity}>•</Text>
+              <Text style={styles.continuity}>1.2 mi visualizações</Text>
+              <Text style={styles.continuity}>•</Text>
+              <Text style={styles.continuity}>há 6 dias</Text>
+            </View>
+          </View>
+          <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate('Video', {
+              videoId: 3,
+            })
+          }}
+        >
+          <Image
+            style={styles.cardImage}
+            source={require('../assets/images/thumbnail3.jpg')}
+          />
+          <View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+          <View style={styles.inline}>
+            <Pressable
+              onPress={() => {
+                navigation.navigate('Channel', {
+                  channelId: 1,
+                })
+              }}
+            >
+              <Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')} />
+            </Pressable>
+            <Text style={styles.title}>Como funciona o Akinator? O GÊNIO da Internet!</Text>
+            <View style={styles.inlineInside}>
+              <Text style={styles.subtitles}>Você Sabia?</Text>
+              <Text style={styles.continuity}>•</Text>
+              <Text style={styles.continuity}>3.7 mi visualizações</Text>
+              <Text style={styles.continuity}>•</Text>
+              <Text style={styles.continuity}>há 3 semanas</Text>
+            </View>
+          </View>
+          <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+        </Pressable>
+      </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    flex: 1
   },
   title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+    marginLeft: 10,
+    marginTop: -5,
+    fontSize: 22.4,
+    fontWeight: '500',
+    width: '80%'
+  },
+  subtitles: {
+    fontSize: 13,
+    opacity: .6
+  },
+  continuity: {
+    fontSize: 13,
+    marginLeft: 5,
+    opacity: .6
   },
   separator: {
-    marginVertical: 30,
+    marginVertical: 10,
     height: 1,
-    width: '80%',
+    width: '100%'
   },
+  separatorFromVideo: {
+    marginVertical: 5,
+    height: 1,
+    width: '100%'
+  },
+  cardBackground: {
+    flex: 1
+  },
+  cardImage: {
+    width: '100%',
+    height: 210
+  },
+  channelIcon: {
+    width: 30,
+    height: 30,
+    borderRadius: 100,
+    marginLeft: 10
+  },
+	channel: {
+    alignItems: 'center',
+    justifyContent: 'center',
+		margin: 10,
+	},	
+	channelName: {
+		margin: 10,
+		fontSize: 20,
+		width: '100%',
+    textAlign: 'center',
+	},
+	channelIconBig: {
+		width: 100,
+		height: 100,
+		borderRadius: 50,
+	},
+  inline: {
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  },
+  inlineInside: {
+    marginLeft: 52,
+    flexDirection: 'row',
+    flexWrap: 'wrap'
+  }
 });
