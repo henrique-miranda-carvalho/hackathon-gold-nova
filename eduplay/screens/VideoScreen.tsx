@@ -44,15 +44,15 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 							onPress={() => {setLikeOrNot(!likeOrNot)}}>
 							<AntDesign style={styles.likeButton} name={likeOrNot ? 'like2' : 'like1'} size={24} color={colorScheme}/>
 						</Pressable>
-						<Text>13 mil</Text>
+						<Text style={styles.centralized}>13 mil</Text>
 					</View>
 					<View style={styles.feedbackShare}>
 						<AntDesign style={styles.shareButton} name="sharealt" size={24} color={colorScheme} />
-						<Text>Compartilhar</Text>
+						<Text style={styles.centralized}>Compartilhar</Text>
 					</View>
 					<View style={styles.feedbackReport}>
 						<AntDesign style={styles.reportButton} name="flag" size={24} color={colorScheme} />
-						<Text>Denunciar</Text>
+						<Text style={styles.centralized}>Denunciar</Text>
 					</View>
 				</View>
 			</View>
@@ -93,25 +93,36 @@ const styles = StyleSheet.create({
 		marginLeft: 10
 	},
 	feedbackLike: {
-		marginTop: 20,
-		marginLeft: 40
+		flex: .85,
+		marginTop: 20
 	},
 	feedbackShare: {
-		marginTop: 20,
-		marginLeft: 70
+		flex: 1,
+		marginTop: 20
 	},
 	feedbackReport: {
-		marginTop: 20,
-		marginLeft: 60
+		flex: 1,
+		marginTop: 20
 	},
 	likeButton: {
-		marginLeft: 9
+		justifyContent: 'center',
+		alignSelf: 'center',
+		alignItems:'center',
 	},
 	shareButton: {
-		marginLeft: 28
+		justifyContent: 'center',
+		alignSelf: 'center',
+		alignItems:'center',
 	},
 	reportButton: {
-		marginLeft: 22
+		justifyContent: 'center',
+		alignSelf: 'center',
+		alignItems:'center',
+	},
+	centralized: {
+		justifyContent: 'center',
+		alignSelf: 'center',
+		alignItems:'center',
 	},
 	views: {
 		fontSize: 12,
