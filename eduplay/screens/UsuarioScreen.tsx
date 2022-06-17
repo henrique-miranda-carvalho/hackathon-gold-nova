@@ -7,8 +7,6 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
 
-export default function UsuarioScreen() {
-  const [isgLogado, setLogado] = React.useState(false)
 export default function UsuarioScreen({ route, navigation }: RootStackScreenProps<'Usuario'>) {
   return (
     <View style={styles.container}>
