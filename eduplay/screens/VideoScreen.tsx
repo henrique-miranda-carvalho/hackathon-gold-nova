@@ -19,7 +19,7 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 				style={styles.video}
 				source={require('../assets/videos/video1.mp4')}
 				useNativeControls
-				resizeMode='contain'
+				resizeMode={'contain'}
 			/>
 			<Pressable
 					onPress={() => {setShowDescription(!showDescription)}}

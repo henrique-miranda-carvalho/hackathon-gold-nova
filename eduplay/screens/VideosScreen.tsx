@@ -73,7 +73,7 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
 						<Text style={styles.title}>Como funciona o Akinator? O GÊNIO da Internet!</Text>
-						<View style={styles.inline}>
+						<View style={styles.inlineInside}>
 							<Text style={styles.subtitles}>Você Sabia?</Text>
 							<Text style={styles.continuity}>•</Text>
 							<Text style={styles.continuity}>3.7 mi visualizações</Text>
@@ -100,7 +100,6 @@ const styles = StyleSheet.create({
 		width: '80%'
 	},
 	subtitles: {
-		marginLeft: 52,
 		fontSize: 13,
 		opacity: .6
 	},
@@ -133,6 +132,11 @@ const styles = StyleSheet.create({
 		marginLeft: 10
 	},
 	inline: {
+		flexDirection: 'row',
+		flexWrap: 'wrap'
+	},
+	inlineInside: {
+		marginLeft: 52,
 		flexDirection: 'row',
 		flexWrap: 'wrap'
 	}
