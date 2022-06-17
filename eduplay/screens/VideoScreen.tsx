@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 	},
 	showDescription: {
 		margin: 10,
-		opacity: 0.5,
+		color: '#999'
 	},
 	description: {
 		margin: 10,
