@@ -51,9 +51,9 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 						<View style={styles.inline}>
 							<Text style={styles.subtitles}>Você Sabia?</Text>
 							<Text style={styles.continuity}>•</Text>
-							<Text style={styles.continuity}>160 mil visualizações</Text>
+							<Text style={styles.continuity}>1.2 mi visualizações</Text>
 							<Text style={styles.continuity}>•</Text>
-							<Text style={styles.continuity}>há 1 hora</Text>
+							<Text style={styles.continuity}>há 6 dias</Text>
 						</View>
 					</View>
 					<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
@@ -67,7 +67,20 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 						style={styles.cardImage}
 						source={require('../assets/images/thumbnail3.jpg')}
 					/>
-					<Text style={styles.title}>Como funciona o Akinator? O GÊNIO da Internet!</Text>
+					<View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+					<View style={styles.inline}>
+						<Pressable>
+							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
+						</Pressable>
+						<Text style={styles.title}>Como funciona o Akinator? O GÊNIO da Internet!</Text>
+						<View style={styles.inline}>
+							<Text style={styles.subtitles}>Você Sabia?</Text>
+							<Text style={styles.continuity}>•</Text>
+							<Text style={styles.continuity}>3.7 mi visualizações</Text>
+							<Text style={styles.continuity}>•</Text>
+							<Text style={styles.continuity}>há 3 semanas</Text>
+						</View>
+					</View>
 					<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 				</Pressable>
 			</ScrollView>
@@ -84,7 +97,6 @@ const styles = StyleSheet.create({
 		marginTop: -5,
 		fontSize: 22.4,
 		fontWeight: '500',
-		textOverflow: 'ellipsis',
 		width: '80%'
 	},
 	subtitles: {

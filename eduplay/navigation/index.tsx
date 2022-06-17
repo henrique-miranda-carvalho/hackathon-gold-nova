@@ -79,7 +79,7 @@ function BottomTabNavigator() {
 				component={VideosScreen}
 				options={({ navigation }: RootTabScreenProps<'Videos'>) => ({
 					title: 'Vídeos',
-					tabBarIcon: ({ color }) => <FontAwesome name="video-camera" size={30} color={color} />,
+					tabBarIcon: ({ color }) => <FontAwesome name="video-camera" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
 							onPress={() => navigation.navigate('Usuario')}
@@ -101,7 +101,7 @@ function BottomTabNavigator() {
 				component={AudiosScreen}
 				options={({ navigation }: RootTabScreenProps<'Audios'>) => ({
 					title: 'Áudios',
-					tabBarIcon: ({ color }) => <MaterialIcons name="multitrack-audio" size={30} color={color} />,
+					tabBarIcon: ({ color }) => <MaterialIcons name="multitrack-audio" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
 							onPress={() => navigation.navigate('Usuario')}
@@ -123,7 +123,7 @@ function BottomTabNavigator() {
 				component={TvsScreen}
 				options={({ navigation }: RootTabScreenProps<'Tvs'>) => ({
 					title: 'TVs',
-					tabBarIcon: ({ color }) => <Entypo name="tv" size={30} color={color} />,
+					tabBarIcon: ({ color }) => <Entypo name="tv" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
 							onPress={() => navigation.navigate('Usuario')}
@@ -144,8 +144,8 @@ function BottomTabNavigator() {
 				name="Radios"
 				component={RadiosScreen}
 				options={({ navigation }: RootTabScreenProps<'Radios'>) => ({
-					title: 'Radios',
-					tabBarIcon: ({ color }) => <Entypo name="radio" size={30} color={color} />,
+					title: 'Rádios',
+					tabBarIcon: ({ color }) => <Entypo name="radio" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
 							onPress={() => navigation.navigate('Usuario')}
@@ -167,7 +167,7 @@ function BottomTabNavigator() {
 				component={PodcastsScreen}
 				options={({ navigation }: RootTabScreenProps<'Podcasts'>) => ({
 					title: 'Podcasts',
-					tabBarIcon: ({ color }) => <FontAwesome name="podcast" size={30} color={color} />,
+					tabBarIcon: ({ color }) => <FontAwesome name="podcast" size={25} color={color} />,
 					headerRight: () => (
 						<Pressable
 							onPress={() => navigation.navigate('Usuario')}
