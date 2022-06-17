@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
 		fontFamily: 'Roboto',
 		marginLeft: 10,
 		marginTop: -5,
-		fontSize: 22.4,
+		fontSize: 19,
 		fontWeight: '600',
 		width: '80%'
 	},
