@@ -59,18 +59,28 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 			{ showDescription &&
 				<Text style={styles.description}>A suite VLibras é um conjunto de ferramentas gratuitas e de código aberto que traduz conteúdos digitais (texto, áudio e vídeo) em Português para Libras, tornando computadores, celulares e plataformas Web mais acessíveis para as pessoas surdas.</Text>
 			}
-			<Pressable
-				onPress={() => {navigation.navigate('Channel', {
-					channelId: 1,
-				})}}
-				style={styles.channel}
-			>
-				<Image
-					style={styles.channelIcon}
-					source={require('../assets/images/channelicon.jpg')}
-				/>
-				<Text style={styles.channelName}>Você Sabia?</Text>
-			</Pressable>
+			<View style={styles.inlineWithBorders}>
+				<Pressable
+					onPress={() => {navigation.navigate('Channel', {
+						channelId: 1,
+					})}}
+					style={styles.channel}
+				>
+					<Image
+						style={styles.channelIcon}
+						source={require('../assets/images/channelicon.jpg')}
+					/>
+				</Pressable>
+				<Pressable
+					onPress={() => {navigation.navigate('Channel', {
+						channelId: 1,
+					})}}
+				>
+					<Text style={{marginTop: 9, fontSize: 14}}>Você Sabia?</Text>
+					<Text style={{fontSize: 12, opacity: .6}}>7 mi inscritos</Text>
+				</Pressable>
+				<Text style={{textAlign: 'right', fontSize: 14, color: 'red', fontWeight: '800'}}>SEGUIR</Text>
+			</View>
 		</View>
 	);
 }
@@ -82,6 +92,14 @@ const styles = StyleSheet.create({
 	inline: {
 		flexDirection:'row',
 		flexWrap:'wrap',
+	},
+	inlineWithBorders: {
+		marginTop: 10,
+		borderTopWidth: 1,
+		borderBottomWidth: 1,
+		borderColor: 'rgba(255,255,255,.15)',
+		flexDirection:'row',
+		flexWrap:'wrap'
 	},
 	title: {
 		margin: 10,
