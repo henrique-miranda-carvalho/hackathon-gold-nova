@@ -76,7 +76,7 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 					<Text style={{marginTop: 9, fontSize: 14}}>Você Sabia?</Text>
 					<Text style={{fontSize: 12, opacity: .6}}>7 mi inscritos</Text>
 				</Pressable>
-				<Text style={{fontSize: 20, color: 'red', fontWeight: '800', justifyContent: 'center', alignSelf: 'center', marginLeft: 'auto', marginRight: 15}}>SEGUIR</Text>
+				<Text style={{fontSize: 20, color: 'red', fontWeight: '800', justifyContent: 'center', alignSelf: 'center', marginLeft: 'auto', marginRight: 10}}>SEGUIR</Text>
 			</View>
 			{ showDescription &&
 				<View style={styles.borderBottomWithOpacity}>
@@ -229,7 +229,10 @@ const styles = StyleSheet.create({
 	mLeft: {
 		flexDirection:'row',
 		flexWrap:'wrap',
-		paddingTop: 5,
+		paddingTop: 15,
+		paddingBottom: 15,
+		borderBottomWidth: 1,
+		borderColor: 'rgba(255,255,255,.15)'
 	},
 	title: {
 		marginTop: 10,
