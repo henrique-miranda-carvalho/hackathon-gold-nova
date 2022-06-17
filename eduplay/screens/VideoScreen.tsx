@@ -1,6 +1,6 @@
 import { TabRouter } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet, Pressable } from 'react-native';
+import { Platform, StyleSheet, Pressable, Appearance } from 'react-native';
 import { FontAwesome, Entypo, MaterialIcons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 
@@ -10,6 +10,7 @@ import { Video, AVPlaybackStatus } from "expo-av";
 import * as React from 'react';
 
 export default function VideoScreen({ route, navigation }: RootStackScreenProps<'Video'>) {
+	const colorScheme = Appearance.getColorScheme() == "dark" ? 'white' : 'black';
 	const video = React.useRef(null);
 	const [showDescription, setShowDescription] = React.useState(false);
 	const [likeOrNot, setLikeOrNot] = React.useState(true);
@@ -41,16 +42,16 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 					<View style={styles.feedbackLike}>
 						<Pressable
 							onPress={() => {setLikeOrNot(!likeOrNot)}}>
-							<AntDesign style={styles.likeButton} name={likeOrNot ? 'like2' : 'like1'} size={24} color="white"/>
+							<AntDesign style={styles.likeButton} name={likeOrNot ? 'like2' : 'like1'} size={24} color={colorScheme}/>
 						</Pressable>
 						<Text>13 mil</Text>
 					</View>
 					<View style={styles.feedbackShare}>
-						<AntDesign style={styles.shareButton} name="sharealt" size={24} color="white" />
+						<AntDesign style={styles.shareButton} name="sharealt" size={24} color={colorScheme} />
 						<Text>Compartilhar</Text>
 					</View>
 					<View style={styles.feedbackReport}>
-						<AntDesign style={styles.reportButton} name="flag" size={24} color="white" />
+						<AntDesign style={styles.reportButton} name="flag" size={24} color={colorScheme} />
 						<Text>Denunciar</Text>
 					</View>
 				</View>
