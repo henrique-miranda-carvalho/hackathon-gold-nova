@@ -110,7 +110,7 @@ const styles = StyleSheet.create({
 		marginLeft: 28
 	},
 	reportButton: {
-		marginLeft: 20
+		marginLeft: 22
 	},
 	views: {
 		fontSize: 12,
