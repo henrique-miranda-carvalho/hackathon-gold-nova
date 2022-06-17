@@ -8,7 +8,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer, DefaultTheme, DarkTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import * as React from 'react';
-import { ColorSchemeName, Pressable, Image } from 'react-native';
+import { ColorSchemeName, Pressable, Image, View } from 'react-native';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
@@ -21,6 +21,7 @@ import RadiosScreen from '../screens/RadiosScreen';
 import PodcastsScreen from '../screens/PodcastsScreen';
 import VideoScreen from '../screens/VideoScreen';
 import ChannelScreen from '../screens/ChannelScreen';
+import SearchScreen from '../screens/SearchScreen';
 import {EmailScreen, SenhaScreen} from '../screens/LoginScreen';
 import { RootStackParamList, RootStackScreenProps, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -78,6 +79,13 @@ function RootNavigator() {
 						title: "Canal",
 					})}
 				/>
+				<Stack.Screen
+					name="Search"
+					component={SearchScreen}
+					options={({navigation}: RootStackScreenProps<'Search'>) => ({
+						title: "Pesquisar",
+					})}
+				/>
 			</Stack.Group>
 		</Stack.Navigator>
 	);
@@ -107,18 +115,32 @@ function BottomTabNavigator() {
 					title: 'Vídeos',
 					tabBarIcon: ({ color }) => <FontAwesome name="video-camera" size={22} color={color} />,
 					headerRight: () => (
-						<Pressable
-							onPress={() => navigation.navigate('Usuario')}
-							style={({ pressed }) => ({
-								opacity: pressed ? 0.5 : 1,
-							})}>
-							<FontAwesome
-								name="user-circle-o"
-								size={25}
-								color={Colors[colorScheme].text}
-								style={{ marginRight: 15 }}
-							/>
-						</Pressable>
+						<View style={{flexDirection: 'row',	flexWrap: 'wrap'}}>
+							<Pressable
+								onPress={() => navigation.navigate('Search')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="search"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+							<Pressable
+								onPress={() => navigation.navigate('Usuario')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="user-circle-o"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+						</View>
 					),
 					headerLeft: () => (
 						<Image
