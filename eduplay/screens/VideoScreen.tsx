@@ -45,6 +45,14 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 						</Pressable>
 						<Text>13 mil</Text>
 					</View>
+					<View style={styles.feedbackShare}>
+						<AntDesign style={styles.shareButton} name="sharealt" size={24} color="white" />
+						<Text>Compartilhar</Text>
+					</View>
+					<View style={styles.feedbackReport}>
+						<AntDesign style={styles.reportButton} name="flag" size={24} color="white" />
+						<Text>Denunciar</Text>
+					</View>
 				</View>
 			</View>
 			{ showDescription &&
@@ -87,8 +95,22 @@ const styles = StyleSheet.create({
 		marginTop: 20,
 		marginLeft: 40
 	},
+	feedbackShare: {
+		marginTop: 20,
+		marginLeft: 70
+	},
+	feedbackReport: {
+		marginTop: 20,
+		marginLeft: 60
+	},
 	likeButton: {
 		marginLeft: 9
+	},
+	shareButton: {
+		marginLeft: 28
+	},
+	reportButton: {
+		marginLeft: 20
 	},
 	views: {
 		fontSize: 12,
