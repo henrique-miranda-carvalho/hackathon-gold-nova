@@ -28,13 +28,18 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 				<Text style={styles.title}>RECEBEMOS UMA LIGAÇÃO DO SETEALEM !!</Text>
 				<FontAwesome name={ showDescription ? 'angle-up' : 'angle-down'} size={30} style={styles.showDescription} />
 			</Pressable>
-			<View style={styles.channel}>
+			<Pressable
+				onPress={() => {navigation.navigate('Channel', {
+					channelId: 1,
+				})}}
+				style={styles.channel}
+			>
 				<Image
 					style={styles.channelIcon}
 					source={require('../assets/images/thumbnail.jpg')}
 				/>
 				<Text style={styles.channelName}>Você Sabia</Text>
-			</View>
+			</Pressable>
 			{ showDescription &&
 				<Text style={styles.description}>A suite VLibras é um conjunto de ferramentas gratuitas e de código aberto que traduz conteúdos digitais (texto, áudio e vídeo) em Português para Libras, tornando computadores, celulares e plataformas Web mais acessíveis para as pessoas surdas.</Text>
 			}
