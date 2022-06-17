@@ -23,7 +23,7 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
 						<Text style={styles.title}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
-						<View style={styles.inline}>
+						<View style={styles.inlineInside}>
 							<Text style={styles.subtitles}>Você Sabia?</Text>
 							<Text style={styles.continuity}>•</Text>
 							<Text style={styles.continuity}>160 mil visualizações</Text>
@@ -48,7 +48,7 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
 						</Pressable>
 						<Text style={styles.title}>OLHO de DEUS foi encontrado no UNIVERSO!</Text>
-						<View style={styles.inline}>
+						<View style={styles.inlineInside}>
 							<Text style={styles.subtitles}>Você Sabia?</Text>
 							<Text style={styles.continuity}>•</Text>
 							<Text style={styles.continuity}>1.2 mi visualizações</Text>
