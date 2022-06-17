@@ -43,6 +43,7 @@ const linking: LinkingOptions<RootStackParamList> = {
         },
       },
       Video: 'video',
+      Channel: 'channel',
       Usuario: 'usuario',
       NotFound: '*',
     },

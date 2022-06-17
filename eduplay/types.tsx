@@ -17,6 +17,7 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Usuario: undefined;
   Video: {videoId: number};
+  Channel: {channelId: number};
   NotFound: undefined;
 };
 

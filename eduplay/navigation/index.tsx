@@ -20,6 +20,7 @@ import TvsScreen from '../screens/TvsScreen';
 import RadiosScreen from '../screens/RadiosScreen';
 import PodcastsScreen from '../screens/PodcastsScreen';
 import VideoScreen from '../screens/VideoScreen';
+import ChannelScreen from '../screens/VideoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -52,6 +53,14 @@ function RootNavigator() {
 					initialParams={{videoId: 1}}
 					options={() => ({
 						title: "Vídeo",
+					})}
+				/>
+				<Stack.Screen
+					name="Channel"
+					component={ChannelScreen}
+					initialParams={{channelId: 1}}
+					options={() => ({
+						title: "Canal",
 					})}
 				/>
 			</Stack.Group>
