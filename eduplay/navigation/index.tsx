@@ -157,18 +157,32 @@ function BottomTabNavigator() {
 					title: 'Áudios',
 					tabBarIcon: ({ color }) => <MaterialIcons name="multitrack-audio" size={22} color={color} />,
 					headerRight: () => (
-						<Pressable
-							onPress={() => navigation.navigate('Usuario')}
-							style={({ pressed }) => ({
-								opacity: pressed ? 0.5 : 1,
-							})}>
-							<FontAwesome
-								name="user-circle-o"
-								size={25}
-								color={Colors[colorScheme].text}
-								style={{ marginRight: 15 }}
-							/>
-						</Pressable>
+						<View style={{flexDirection: 'row',	flexWrap: 'wrap'}}>
+							<Pressable
+								onPress={() => navigation.navigate('Search')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="search"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+							<Pressable
+								onPress={() => navigation.navigate('Usuario')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="user-circle-o"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+						</View>
 					),
 					headerLeft: () => (
 						<Image
@@ -185,18 +199,32 @@ function BottomTabNavigator() {
 					title: 'Televisões',
 					tabBarIcon: ({ color }) => <Entypo name="tv" size={22} color={color} />,
 					headerRight: () => (
-						<Pressable
-							onPress={() => navigation.navigate('Usuario')}
-							style={({ pressed }) => ({
-								opacity: pressed ? 0.5 : 1,
-							})}>
-							<FontAwesome
-								name="user-circle-o"
-								size={25}
-								color={Colors[colorScheme].text}
-								style={{ marginRight: 15 }}
-							/>
-						</Pressable>
+						<View style={{flexDirection: 'row',	flexWrap: 'wrap'}}>
+							<Pressable
+								onPress={() => navigation.navigate('Search')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="search"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+							<Pressable
+								onPress={() => navigation.navigate('Usuario')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="user-circle-o"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+						</View>
 					),
 					headerLeft: () => (
 						<Image
@@ -213,18 +241,32 @@ function BottomTabNavigator() {
 					title: 'Rádios',
 					tabBarIcon: ({ color }) => <Entypo name="radio" size={22} color={color} />,
 					headerRight: () => (
-						<Pressable
-							onPress={() => navigation.navigate('Usuario')}
-							style={({ pressed }) => ({
-								opacity: pressed ? 0.5 : 1,
-							})}>
-							<FontAwesome
-								name="user-circle-o"
-								size={25}
-								color={Colors[colorScheme].text}
-								style={{ marginRight: 15 }}
-							/>
-						</Pressable>
+						<View style={{flexDirection: 'row',	flexWrap: 'wrap'}}>
+							<Pressable
+								onPress={() => navigation.navigate('Search')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="search"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+							<Pressable
+								onPress={() => navigation.navigate('Usuario')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="user-circle-o"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+						</View>
 					),
 					headerLeft: () => (
 						<Image
@@ -241,18 +283,32 @@ function BottomTabNavigator() {
 					title: 'Podcasts',
 					tabBarIcon: ({ color }) => <FontAwesome name="podcast" size={22} color={color} />,
 					headerRight: () => (
-						<Pressable
-							onPress={() => navigation.navigate('Usuario')}
-							style={({ pressed }) => ({
-								opacity: pressed ? 0.5 : 1,
-							})}>
-							<FontAwesome
-								name="user-circle-o"
-								size={25}
-								color={Colors[colorScheme].text}
-								style={{ marginRight: 15 }}
-							/>
-						</Pressable>
+						<View style={{flexDirection: 'row',	flexWrap: 'wrap'}}>
+							<Pressable
+								onPress={() => navigation.navigate('Search')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="search"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+							<Pressable
+								onPress={() => navigation.navigate('Usuario')}
+								style={({ pressed }) => ({
+									opacity: pressed ? 0.5 : 1,
+								})}>
+								<FontAwesome
+									name="user-circle-o"
+									size={25}
+									color={Colors[colorScheme].text}
+									style={{ marginRight: 15 }}
+								/>
+							</Pressable>
+						</View>
 					),
 					headerLeft: () => (
 						<Image
