@@ -25,7 +25,7 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 					resizeMode='contain'
 				/>
 				<View style={styles.inline}>
-					<Text style={styles.titleBig}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
+					<Text style={styles.titleBig}>Vídeo Exemplo</Text>
 					<Pressable
 						onPress={() => { setShowDescription(!showDescription) }}
 						style={styles.inline}
@@ -34,7 +34,7 @@ export default function VideoScreen({ route, navigation }: RootStackScreenProps<
 					</Pressable>
 				</View>
 				<View style={styles.inline}>
-					<Text style={styles.views}>160 mil visualizações</Text>
+					<Text style={styles.views}>100 mil visualizações</Text>
 					<Text style={styles.continuity}>•</Text>
 					<Text style={styles.continuity}>há 1 hora</Text>
 				</View>

@@ -31,6 +31,7 @@ function SenhaScreen({ route, navigation }: RootStackScreenProps<'Senha'>) {
       <Text style={styles.texto}>Senha</Text>
       <TextInput
         textContentType='password'
+        secureTextEntry
         style={styles.input}
         onChangeText={onChangeSenha}
         value={senha}
