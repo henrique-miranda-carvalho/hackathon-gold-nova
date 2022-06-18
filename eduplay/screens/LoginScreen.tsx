@@ -1,6 +1,6 @@
 import '../global.ts'
 import { StatusBar } from 'expo-status-bar';
-import { Platform, StyleSheet, TextInput } from 'react-native';
+import { Platform, StyleSheet, TextInput, Appearance } from 'react-native';
 import * as React from 'react';
 
 import EditScreenInfo from '../components/EditScreenInfo';
@@ -65,6 +65,7 @@ const styles = StyleSheet.create({
     padding: 10, 
     borderColor: '#999', 
     borderRadius: 10,
+    color: Appearance.getColorScheme() == "dark" ? 'white' : 'black',
   },
 });
 
