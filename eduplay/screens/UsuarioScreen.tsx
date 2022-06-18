@@ -15,9 +15,9 @@ export default function UsuarioScreen({ route, navigation }: RootStackScreenProp
           <View style={styles.user}>
             <Image
               style={styles.userIcon}
-              source={require('../assets/images/channelicon.jpg')}
+              source={require('../assets/images/placeholder.png')}
             />
-            <Text style={styles.userName}>Você Sabia?</Text>
+            <Text style={styles.userName}>Usuário Exemplo</Text>
           </View>
           <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
           <Pressable>

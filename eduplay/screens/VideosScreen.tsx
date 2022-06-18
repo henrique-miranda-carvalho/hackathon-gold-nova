@@ -15,7 +15,7 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 				>
 					<Image
 						style={styles.cardImage}
-						source={require('../assets/images/thumbnail.jpg')}
+						source={require('../assets/images/placeholder.png')}
 					/>
 					<View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 					<View style={styles.inline}>
@@ -24,13 +24,13 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 								channelId: 1,
 							})}}
 						>
-							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
+							<Image style={styles.channelIcon} source={require('../assets/images/placeholder.png')}/>
 						</Pressable>
-						<Text style={styles.title} numberOfLines={2}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
+						<Text style={styles.title} numberOfLines={2}>Exemplo</Text>
 						<View style={styles.inlineInside}>
-							<Text style={styles.subtitles}>Você Sabia?</Text>
+							<Text style={styles.subtitles}>Exemplo</Text>
 							<Text style={styles.continuity}>•</Text>
-							<Text style={styles.continuity}>160 mil visualizações</Text>
+							<Text style={styles.continuity}>100 mil visualizações</Text>
 							<Text style={styles.continuity}>•</Text>
 							<Text style={styles.continuity}>há 1 hora</Text>
 						</View>
@@ -39,12 +39,12 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 				</Pressable>
 				<Pressable
 					onPress={() => {navigation.navigate('Video', {
-						videoId: 2,
+						videoId: 1,
 					})}}
 				>
 					<Image
 						style={styles.cardImage}
-						source={require('../assets/images/thumbnail2.jpg')}
+						source={require('../assets/images/placeholder.png')}
 					/>
 					<View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 					<View style={styles.inline}>
@@ -53,27 +53,27 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 								channelId: 1,
 							})}}
 						>
-							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
+							<Image style={styles.channelIcon} source={require('../assets/images/placeholder.png')}/>
 						</Pressable>
-						<Text style={styles.title} numberOfLines={2}>OLHO de DEUS foi encontrado no UNIVERSO!</Text>
+						<Text style={styles.title} numberOfLines={2}>Exemplo</Text>
 						<View style={styles.inlineInside}>
-							<Text style={styles.subtitles}>Você Sabia?</Text>
+							<Text style={styles.subtitles}>Exemplo</Text>
 							<Text style={styles.continuity}>•</Text>
-							<Text style={styles.continuity}>1.2 mi visualizações</Text>
+							<Text style={styles.continuity}>100 mil visualizações</Text>
 							<Text style={styles.continuity}>•</Text>
-							<Text style={styles.continuity}>há 6 dias</Text>
+							<Text style={styles.continuity}>há 1 hora</Text>
 						</View>
 					</View>
 					<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 				</Pressable>
 				<Pressable
 					onPress={() => {navigation.navigate('Video', {
-						videoId: 3,
+						videoId: 1,
 					})}}
 				>
 					<Image
 						style={styles.cardImage}
-						source={require('../assets/images/thumbnail3.jpg')}
+						source={require('../assets/images/placeholder.png')}
 					/>
 					<View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 					<View style={styles.inline}>
@@ -82,15 +82,15 @@ export default function VideosScreen({ navigation }: RootTabScreenProps<'Videos'
 								channelId: 1,
 							})}}
 						>
-							<Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')}/>
+							<Image style={styles.channelIcon} source={require('../assets/images/placeholder.png')}/>
 						</Pressable>
-						<Text style={styles.title} numberOfLines={2}>Como funciona o Akinator? O GÊNIO mais FODA da Internet!</Text>
+						<Text style={styles.title} numberOfLines={2}>Exemplo</Text>
 						<View style={styles.inlineInside}>
-							<Text style={styles.subtitles}>Você Sabia?</Text>
+							<Text style={styles.subtitles}>Exemplo</Text>
 							<Text style={styles.continuity}>•</Text>
-							<Text style={styles.continuity}>3.7 mi visualizações</Text>
+							<Text style={styles.continuity}>100 mil visualizações</Text>
 							<Text style={styles.continuity}>•</Text>
-							<Text style={styles.continuity}>há 3 semanas</Text>
+							<Text style={styles.continuity}>há 1 hora</Text>
 						</View>
 					</View>
 					<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />

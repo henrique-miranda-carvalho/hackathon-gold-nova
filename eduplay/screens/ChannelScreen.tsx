@@ -5,17 +5,17 @@ import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootStackScreenProps } from '../types';
 
-export default function ChannelScreen({navigation}: RootStackScreenProps<'Channel'>) {
+export default function ChannelScreen({ navigation }: RootStackScreenProps<'Channel'>) {
   return (
     <View style={styles.container}>
-			<View style={styles.channel}>
-				<Image
-					style={styles.channelIconBig}
-					source={require('../assets/images/channelicon.jpg')}
-				/>
-				<Text style={styles.channelName}>Você Sabia</Text>
-			</View>
       <ScrollView>
+        <View style={styles.channel}>
+          <Image
+            style={styles.channelIconBig}
+            source={require('../assets/images/placeholder.png')}
+          />
+          <Text style={styles.channelName}>Exemplo</Text>
+        </View>
         <Pressable
           onPress={() => {
             navigation.navigate('Video', {
@@ -25,7 +25,7 @@ export default function ChannelScreen({navigation}: RootStackScreenProps<'Channe
         >
           <Image
             style={styles.cardImage}
-            source={require('../assets/images/thumbnail.jpg')}
+            source={require('../assets/images/placeholder.png')}
           />
           <View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
           <View style={styles.inline}>
@@ -36,13 +36,13 @@ export default function ChannelScreen({navigation}: RootStackScreenProps<'Channe
                 })
               }}
             >
-              <Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')} />
+              <Image style={styles.channelIcon} source={require('../assets/images/placeholder.png')} />
             </Pressable>
-            <Text style={styles.title}>Recebemos uma LIGAÇÃO do SETEALÉM!</Text>
+            <Text style={styles.title} numberOfLines={2}>Exemplo</Text>
             <View style={styles.inlineInside}>
-              <Text style={styles.subtitles}>Você Sabia?</Text>
+              <Text style={styles.subtitles}>Exemplo</Text>
               <Text style={styles.continuity}>•</Text>
-              <Text style={styles.continuity}>160 mil visualizações</Text>
+              <Text style={styles.continuity}>100 mil visualizações</Text>
               <Text style={styles.continuity}>•</Text>
               <Text style={styles.continuity}>há 1 hora</Text>
             </View>
@@ -52,13 +52,13 @@ export default function ChannelScreen({navigation}: RootStackScreenProps<'Channe
         <Pressable
           onPress={() => {
             navigation.navigate('Video', {
-              videoId: 2,
+              videoId: 1,
             })
           }}
         >
           <Image
             style={styles.cardImage}
-            source={require('../assets/images/thumbnail2.jpg')}
+            source={require('../assets/images/placeholder.png')}
           />
           <View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
           <View style={styles.inline}>
@@ -69,15 +69,15 @@ export default function ChannelScreen({navigation}: RootStackScreenProps<'Channe
                 })
               }}
             >
-              <Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')} />
+              <Image style={styles.channelIcon} source={require('../assets/images/placeholder.png')} />
             </Pressable>
-            <Text style={styles.title}>OLHO de DEUS foi encontrado no UNIVERSO!</Text>
+            <Text style={styles.title} numberOfLines={2}>Exemplo</Text>
             <View style={styles.inlineInside}>
-              <Text style={styles.subtitles}>Você Sabia?</Text>
+              <Text style={styles.subtitles}>Exemplo</Text>
               <Text style={styles.continuity}>•</Text>
-              <Text style={styles.continuity}>1.2 mi visualizações</Text>
+              <Text style={styles.continuity}>100 mil visualizações</Text>
               <Text style={styles.continuity}>•</Text>
-              <Text style={styles.continuity}>há 6 dias</Text>
+              <Text style={styles.continuity}>há 1 hora</Text>
             </View>
           </View>
           <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
@@ -85,13 +85,13 @@ export default function ChannelScreen({navigation}: RootStackScreenProps<'Channe
         <Pressable
           onPress={() => {
             navigation.navigate('Video', {
-              videoId: 3,
+              videoId: 1,
             })
           }}
         >
           <Image
             style={styles.cardImage}
-            source={require('../assets/images/thumbnail3.jpg')}
+            source={require('../assets/images/placeholder.png')}
           />
           <View style={styles.separatorFromVideo} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
           <View style={styles.inline}>
@@ -102,15 +102,15 @@ export default function ChannelScreen({navigation}: RootStackScreenProps<'Channe
                 })
               }}
             >
-              <Image style={styles.channelIcon} source={require('../assets/images/channelicon.jpg')} />
+              <Image style={styles.channelIcon} source={require('../assets/images/placeholder.png')} />
             </Pressable>
-            <Text style={styles.title}>Como funciona o Akinator? O GÊNIO da Internet!</Text>
+            <Text style={styles.title} numberOfLines={2}>Exemplo</Text>
             <View style={styles.inlineInside}>
-              <Text style={styles.subtitles}>Você Sabia?</Text>
+              <Text style={styles.subtitles}>Exemplo</Text>
               <Text style={styles.continuity}>•</Text>
-              <Text style={styles.continuity}>3.7 mi visualizações</Text>
+              <Text style={styles.continuity}>100 mil visualizações</Text>
               <Text style={styles.continuity}>•</Text>
-              <Text style={styles.continuity}>há 3 semanas</Text>
+              <Text style={styles.continuity}>há 1 hora</Text>
             </View>
           </View>
           <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
@@ -124,13 +124,14 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-  title: {
-    marginLeft: 10,
-    marginTop: -5,
-    fontSize: 22.4,
-    fontWeight: '500',
-    width: '80%'
-  },
+	title: {
+		fontFamily: 'Roboto',
+		marginLeft: 10,
+		marginTop: -5,
+		fontSize: 19,
+		fontWeight: '600',
+		width: '80%'
+	},
   subtitles: {
     fontSize: 13,
     opacity: .6
@@ -163,22 +164,22 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     marginLeft: 10
   },
-	channel: {
+  channel: {
     alignItems: 'center',
     justifyContent: 'center',
-		margin: 10,
-	},	
-	channelName: {
-		margin: 10,
-		fontSize: 20,
-		width: '100%',
+    margin: 10,
+  },
+  channelName: {
+    margin: 10,
+    fontSize: 20,
+    width: '100%',
     textAlign: 'center',
-	},
-	channelIconBig: {
-		width: 100,
-		height: 100,
-		borderRadius: 50,
-	},
+  },
+  channelIconBig: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+  },
   inline: {
     flexDirection: 'row',
     flexWrap: 'wrap'
